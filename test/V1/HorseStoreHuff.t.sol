@@ -7,7 +7,7 @@ import { HuffDeployer } from "lib/foundry-huff/src/HuffDeployer.sol";
 contract HorseStoreHuff is Base_TestV1 {
     string public constant HORSE_STORE_HUFF_LOCATION = "horseStoreV1/HorseStore";
 
-    function setUp() public override {
+    function setUp() public virtual override {
         horseStore = HorseStore(HuffDeployer.config().deploy(HORSE_STORE_HUFF_LOCATION));
     }
 }

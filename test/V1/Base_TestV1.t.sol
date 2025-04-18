@@ -2,11 +2,12 @@
 pragma solidity ^0.8.26;
 
 import { Test, console2 } from "forge-std/Test.sol";
+import { IHorseStore } from "../../src/horseStoreV1/IHorseStore.sol";
 import { HorseStore } from "../../src/horseStoreV1/HorseStore.sol";
 
 // Differential testing -> both huff and solc codes
 abstract contract Base_TestV1 is Test {
-    HorseStore public horseStore;
+    IHorseStore public horseStore;
 
     function setUp() public virtual {
         horseStore = new HorseStore(); 
