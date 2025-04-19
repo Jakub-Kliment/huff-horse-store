@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 pragma solidity ^0.8.28;
 
-import { IHorseStore } from "./IHorseStore.sol";
+import {IHorseStore} from "./IHorseStore.sol";
 
 contract HorseStoreYul is IHorseStore {
     uint256 numberOfHorses;
@@ -18,7 +18,7 @@ contract HorseStoreYul is IHorseStore {
         assembly {
             let num := sload(numberOfHorses.slot)
             mstore(0, num)
-            return(0, 0x20) 
+            return(0, 0x20)
         }
     }
 }

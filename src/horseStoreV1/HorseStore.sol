@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 pragma solidity ^0.8.28;
 
-import { IHorseStore } from "./IHorseStore.sol";
+import {IHorseStore} from "./IHorseStore.sol";
 
 contract HorseStore is IHorseStore {
     uint256 numberOfHorses;
